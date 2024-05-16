@@ -15,7 +15,7 @@ const app = Vue.createApp({
         },
         sortedRecords() {
             return this.records.sort(
-                (a, b) => a.fields.Número - b.fields.Número
+                (a, b) => a.fields.Number - b.fields.Number
             );
         },
     },
@@ -32,13 +32,11 @@ const app = Vue.createApp({
                 }
             )
                 .then((response) => {
-                    // if (!response.ok) {
-                    //     throw new Error(
-                    //         `HTTP error! status: ${response.status}`
-                    //     );
-                    // }else{
-
-                    // }
+                    if (!response.ok) {
+                        throw new Error(
+                            `HTTP error! status: ${response.status}`
+                        );
+                    }
                     return response.json();
                 })
                 .then((data) => {
