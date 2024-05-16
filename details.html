@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                /* height: 100vh; */
+                margin: 0;
+                font-family: Arial, sans-serif;
+                background-color: #eceff1;
+            }
+            table {
+                width: 100%;
+                /* border-collapse: collapse; */
+            }
+            td {
+                border: 1px solid #000;
+                text-align: left;
+                padding: 10px;
+            }
+            td {
+                background-color: #f5f5f5; /* Color por defecto */
+            }
+            .has-name {
+                background-color: #c5e1a5; /* Color para celdas con nombre */
+            }
+            .no-name {
+                background-color: #ef9a9a; /* Color para celdas sin nombre */
+            }
+            .container {
+                margin: auto;
+                width: 80%;
+                margin-top: 25px;
+                margin-bottom: 25px;
+            }
+            a {
+                margin-top: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div id="myApp">
+                <table-component
+                    :rows-array="rowsArray"
+                    :cols-array="colsArray"
+                ></table-component>
+                <a href="index.html" class="btn">Disponibles</a>
+            </div>
+        </div>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="details.js"></script>
+    </body>
+</html>
